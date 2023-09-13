@@ -9,7 +9,7 @@ pipeline{
                steps{
 		 echo 'cloning..'
                  git 'https://github.com/akshu20791/DevOpsClassCodes.git'
-              }
+	       }
           }
           stage('Compile'){
              
