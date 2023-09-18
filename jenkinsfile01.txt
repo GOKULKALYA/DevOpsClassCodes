@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage("code update"){
+            steps{
+            git url: 'https://github.com/GOKULKALYA/DevOpsClassCodes.git'
+            }
+        }
+        stage("code compile"){
+            steps{
+                sh 'mvn compile'
+            }
+        }
+        stage("code test"){
+            steps{
+                sh 'mvn test'
+            }
+        }
+        stage("code package"){
+            steps{
+                sh 'mvn package'
+            }
+        }
+    }
+}
